@@ -1,3 +1,9 @@
+const score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+};
+
 function RPS(player){
     const randomNum = Math.random();
     let computerMove = '';
@@ -47,5 +53,32 @@ function RPS(player){
         }
     }
 
-    alert(`You picked ${player}. Computer picked ${computerMove}. ${result}!`);
+    if (result === 'You Win') {
+        score.wins += 1;
+    }
+    else if (result === 'You Lose') {
+        score.losses += 1;
+    }
+    else {
+        score.ties += 1;
+    }
+    alert(`You picked ${player}. Computer picked ${computerMove}. ${result}!
+Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);
 }
+
+document.getElementById('rock').addEventListener('click', function() {
+    RPS('Rock');
+})
+document.getElementById('paper').addEventListener('click', function() {
+    RPS('Paper');
+})
+document.getElementById('scissor').addEventListener('click', function() {
+    RPS('Scissor');
+})
+
+document.getElementById('resetScore').addEventListener('click', function() {
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    alert('You reset the score!')
+})

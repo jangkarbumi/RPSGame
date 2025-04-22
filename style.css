@@ -20,6 +20,11 @@ button {
     margin-right: 20px;
 }
 
+.reset {
+    width: 120px;
+    font-size: 19px;
+}
+
 .content {
     display: flex;
     justify-content: center;
