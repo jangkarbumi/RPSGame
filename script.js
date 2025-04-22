@@ -1,4 +1,12 @@
-const score = localStorage.getItem('score', JSON.parse(score));
+let score = JSON.parse(localStorage.getItem('score'))
+
+if (score === null) {
+    score = {
+        wins: 0,
+        losses: 0,
+        ties : 0
+    }
+}
 
 function RPS(player){
     const randomNum = Math.random();
@@ -79,5 +87,6 @@ document.getElementById('resetScore').addEventListener('click', function() {
     score.wins = 0;
     score.losses = 0;
     score.ties = 0;
+    localStorage.removeItem('score');
     alert('You reset the score!')
 })
