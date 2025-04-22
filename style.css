@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+}
+
+p {
+    color: white;
+    font-size: 50px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+button {
+    height: 60px;
+    width: 90px;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
