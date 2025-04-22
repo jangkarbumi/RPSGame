@@ -1,8 +1,4 @@
-const score = {
-    wins: 0,
-    losses: 0,
-    ties: 0
-};
+const score = localStorage.getItem('score', JSON.parse(score));
 
 function RPS(player){
     const randomNum = Math.random();
@@ -62,6 +58,9 @@ function RPS(player){
     else {
         score.ties += 1;
     }
+
+    localStorage.setItem('score', JSON.stringify(score));
+
     alert(`You picked ${player}. Computer picked ${computerMove}. ${result}!
 Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);
 }
