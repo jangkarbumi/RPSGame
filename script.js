@@ -47,7 +47,7 @@ function RPS(player){
     }
     else {
         if (computerMove === 'Rock') {
-            result = 'You lose';
+            result = 'You Lose';
         }
         else if(computerMove === 'Paper') {
             result = 'You Win';
