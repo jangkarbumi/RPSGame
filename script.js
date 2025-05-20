@@ -73,7 +73,7 @@ function RPS(player) {
         }
     }
 
-    if (result === 'You Win') {
+    if (result === 'You Win!') {
         score.wins += 1;
     }
     else if (result === 'You Lose!') {
