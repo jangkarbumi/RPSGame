@@ -93,7 +93,7 @@ function updateScore() {
     kalah.textContent = `Losses: ${score.losses}`;
     imbang.textContent = `Ties: ${score.ties}`;
 }
-
+//reset skor nya
 function reset() {
     score.wins = score.losses = score.ties = 0;
     saveScore();
