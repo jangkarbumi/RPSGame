@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rock Paper Scissor</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="title">
@@ -12,10 +15,16 @@
         </div>
         
         <div class="content">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissor">Scissor</button>
-            <button id="resetScore" class="reset">Reset Score</button>
+            <button class="button rock" id="rock">🪨</button>
+            <button class="button paper" id="paper">✋</button>
+            <button class="button scissor" id="scissor">✂️</button>
+            <button id="resetScore" class="button reset">Reset Score</button>
+        </div>
+
+        <div class="score">
+            <p id="menang">Wins: 0</p>
+            <P id="kalah">Losses: 0</P>
+            <p id="imbang">Ties: 0</p>
         </div>
         <script src="script.js"></script>
     </body>
