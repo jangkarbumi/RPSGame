@@ -1,3 +1,7 @@
+* {
+    font-family: "Share Tech";
+}
+
 body {
     background-color: black;
 }
@@ -14,18 +18,68 @@ p {
 }
 
 button {
-    height: 60px;
-    width: 90px;
-    font-size: 25px;
+    height: 150px;
+    width: 150px;
+    font-size: 60px;
     margin-right: 20px;
+    border-radius: 50%;
+    background-color: black;
+    border-color: yellow;
+    border-width: 5px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-style: solid;
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+button:active {
+    transform: scale(1.2);
 }
 
 .reset {
-    width: 120px;
-    font-size: 19px;
+    font-size: 27px;
 }
 
 .content {
     display: flex;
     justify-content: center;
+    gap: 5px;
+}
+
+.score {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+@media (max-width: 726px) {
+    .title p {
+        font-size: 35px;
+    }
+
+    button {
+        height: 70px;
+        width: 70px;
+        font-size: 30px;
+        border-width: 2px;
+    }
+
+    .reset {
+        font-size: medium;
+    }
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .score p {
+        font-size: 30px;
+    }
 }
