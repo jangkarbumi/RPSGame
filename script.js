@@ -5,6 +5,7 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissor = document.getElementById('scissor');
 const resetScore = document.getElementById('resetScore');
+const message = document.getElementById('message');
 
 let score = {
     wins: 0,
@@ -40,47 +41,50 @@ function RPS(player) {
     let result = '';
     if (player === 'rock') {
         if (computerMove === 'Rock') {
-            result = 'tie';
+            result = 'Tie!';
         }
         else if (computerMove === 'Paper') {
-            result = 'lose';
+            result = 'You Lose!';
         }
         else {
-            result = 'win';
+            result = 'You Win!';
         }
     }
     else if (player === 'paper') {
         if (computerMove === 'Rock') {
-            result = 'win';
+            result = 'You Win!';
         }
         else if (computerMove === 'Paper') {
-            result = 'tie';
+            result = 'Tie!';
         }
         else {
-            result = 'lose';
+            result = 'You Lose!';
         }        
     }
     else {
         if (computerMove === 'Rock') {
-            result = 'lose';
+            result = 'You Lose!';
         }
         else if (computerMove === 'Paper') {
-            result = 'win';
+            result = 'You Win!';
         }
         else {
-            result = 'tie';
+            result = 'Tie!';
         }
     }
 
-    if (result === 'win') {
+    if (result === 'You Win') {
         score.wins += 1;
     }
-    else if (result === 'lose') {
+    else if (result === 'You Lose!') {
         score.losses += 1;
     }
     else {
         score.ties += 1;
     }
+
+    message.innerText = `You picked ${player}. Computer picked ${computerMove}. ${result}`;
+
     saveScore();
 }
 
